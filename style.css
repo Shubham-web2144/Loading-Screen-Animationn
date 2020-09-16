@@ -1,0 +1,138 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #000;
+}
+.loader{
+	width: 600px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.loader{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: red;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	box-shadow: 1px 2px 4px rgba(0,0,0,0.5);
+	animation: spin;
+	animation-iteration-count: infinite;
+	animation-duration: 2.7s;
+	animation-timing-function: ease-in-out;
+}
+.loader:nth-child(1){
+	background-color: red;
+	animation-delay: 0.5s;
+	
+}
+.loader:nth-child(2){
+	background-color: blue;
+	animation-delay: 0.4s;
+	
+}
+.loader:nth-child(3){
+	background-color: yellow;
+	animation-delay: 0.3s;
+	
+}
+.loader:nth-child(4){
+	background-color: green;
+	animation-delay: 0.2s;
+	
+}
+.loader:nth-child(5){
+	background-color: #fff;
+	animation-delay: 0s;
+	
+}
+
+@keyframes spin{
+	15%{
+		transform: translateX(0px);
+		
+	}
+	45%{
+		transform: translateX(250px);
+		
+	}
+	60%{
+		transform: translateX(20px);
+		}
+	100%{
+		transform: translateX(0px);
+		
+	}
+}
+
+.txt{
+	position: absolute;
+	top: 60%;
+	left: 40%;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	font-size: 2em;
+}
+.txt:after{
+	content: 'Loading';
+	color: #fff;
+	animation-name: textani;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+}
+@keyframes textani{
+	0%{
+		content: 'Loading';
+	}
+	25%{
+		content: 'Loading.';
+	}
+	50%{
+		content: 'Loading..'
+	}
+	75%{
+		content: 'Loading...';
+	}
+	100%{
+		content: 'Loading'
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
